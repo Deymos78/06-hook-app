@@ -8,6 +8,7 @@ export const Message = () => {
     useEffect(() => {
         // Para remover hay que hacer referencia a la funcion o mejor dicho al espacio en memoria de la funcion
         // Por lo que cuando se quiera remover algo se tioen que crear la referncia
+        // Aqui creamos la referencia del listener, de esta forma podermos tener su referencia en memoria
         const onMouseMove = ( { x, y } ) => {
             const coords = { x, y };
             console.log(coords);  
@@ -32,8 +33,6 @@ export const Message = () => {
       }
     }, [])
     
-
-
   return (
     <>
     
