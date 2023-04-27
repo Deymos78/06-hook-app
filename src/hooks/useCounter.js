@@ -16,7 +16,7 @@ export const useCounter = (initalValue  = 10) => {
     // Los numeros negativos no suelen ser buenos, por lo que tenemos que evitar que el valor sea negativo
     const decrement = (value = 1) => {
         // Con este condicional evitamos que el valor del contador sea inferior a 0
-        if ( counter === 0 ) return ;
+        // if ( counter === 0 ) return ;
         setcounter( counter - value );
     }
 
