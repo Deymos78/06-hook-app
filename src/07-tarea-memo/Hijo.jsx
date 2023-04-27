@@ -1,8 +1,9 @@
+import React from "react";
 
 
 // El Funtional Component recibe un argumento el cual lo desestructuramos y obtenemos dos valores
 // el numero y la referencia de la funcion incrementar()
-export const Hijo = ({ numero, incrementar }) => {
+export const Hijo = React.memo(({ numero, incrementar }) => {
 
     // Generamos la impresion por pantalla cada vez que se realizara la renderizacion del componente
     console.log('  Me volví a generar :(  ');
@@ -14,7 +15,8 @@ export const Hijo = ({ numero, incrementar }) => {
             // Cada boton tiene ligado una funcion
             onClick={ () => incrementar( numero ) }
         >
+            {/* Imprimimos el numero que recibimos */}
             { numero }
         </button>
     )
-}
+})

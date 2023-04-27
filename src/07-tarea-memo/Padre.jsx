@@ -1,5 +1,5 @@
 import { Hijo } from './Hijo'
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 export const Padre = () => {
 
@@ -8,10 +8,18 @@ export const Padre = () => {
     // creamos un hook useState 
     const [valor, setValor] = useState(0);
 
+    const incrementar = useCallback(
+        (num) => {
+          setValor( (valor) => valor + num );
+        },
+        [],
+    )
+
+    
     // La siguiente funcion  incrementa el valor en un numero pasado como argumento 
-    const incrementar = ( num ) => {
-        setValor( valor + num )
-    }
+    // const incrementar = ( num ) => {
+    //     setValor( valor + num )
+    // }
 
     return (
         <div>
