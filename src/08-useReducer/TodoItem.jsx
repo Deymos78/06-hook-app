@@ -1,7 +1,7 @@
 
 
 // ESTE COMPONENTE FUNCIONAL COLOCA EN UNA LISTA CADA TODO QUE SE LE PASE
-export const TodoItem = ({ todo }) => {
+export const TodoItem = ({ todo, onDeleteTodo } ) => {
   return (
 
     <>
@@ -9,7 +9,12 @@ export const TodoItem = ({ todo }) => {
 
         <li key={todo.id} className="list-group-item d-flex justify-content-between">
             <span className="align-self-center">{ todo.description }</span>
-            <button className="btn btn-danger">Borrar</button>
+            <button 
+              className="btn btn-danger"
+              onClick={ () => onDeleteTodo( todo.id )  } 
+            >
+              Borrar
+            </button>
         </li>
     
     </>
