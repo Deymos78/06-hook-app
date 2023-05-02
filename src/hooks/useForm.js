@@ -13,6 +13,7 @@ export const useForm = ( initialForm = {} ) => {
     // const { username, email, password } = formState;
 
  
+    // Cuando se realize un cambio en un input aqui recibiremos el eventro del input y a traves del nombre y el valor
     const onInputChange = ({target}) => {
         // Desestructuramos el target para quedarnos con le name y el value del input que se ha modificado
         const { name, value } = target;
@@ -22,6 +23,7 @@ export const useForm = ( initialForm = {} ) => {
             ...formState,
             [name]: value
         })
+       
     };
 
 

@@ -5,6 +5,9 @@ export const CounterApp = () => {
 
 
 
+  // El useState se usa para  crear y actualizar el estado de un componente funcional,
+  // 
+
     const [ state, setcounter] = useState({
         counter1: 10,
         counter2: 20,
