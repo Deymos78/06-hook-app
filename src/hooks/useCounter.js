@@ -6,7 +6,7 @@ import { useState } from "react"
 export const useCounter = (initalValue  = 10) => {
 
     // Aqui inicializamos un hook de react el hook state
-    const [counter, setcounter] = useState(initalValue)
+    const [counter, setcounter] = useState(initalValue);
 
     // Aqui creamos una funcion la cual incrementara el valor del counter en 1 cada vez que sea llamada
     const increment = (value = 1) => {
@@ -31,5 +31,5 @@ export const useCounter = (initalValue  = 10) => {
         increment,
         decrement,
         reset,
-    }
+    };
 }
