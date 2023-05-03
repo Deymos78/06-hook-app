@@ -61,6 +61,14 @@ export const TodoApp = () => {
         });
     };
 
+    const handleToggleTodo = ( id ) => {
+        dispatch({
+            type: '[TODO] toggle Todo',
+            payload: id
+        });
+         
+    }
+
     return(
         <>
             <h1>Todo App: 10, <small>pendientes: 2</small></h1>
@@ -72,7 +80,11 @@ export const TodoApp = () => {
                 <div className="col-7">
                     
                     {/* Mostramos la lista de los valore que tengamos almacenados, se lo pasamos como argumento */}
-                    <TodoList todos={ todos } onDeleteTodo={ handleDeleteTodo }/>
+                    <TodoList 
+                        todos={ todos } 
+                        onDeleteTodo={ handleDeleteTodo } 
+                        onToggleTodo={ handleToggleTodo }    
+                    />
                     
                 </div>
 
