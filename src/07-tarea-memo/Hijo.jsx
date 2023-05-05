@@ -1,8 +1,8 @@
 import React from "react";
 
-
+// El componente es almacenado a traves de la funcion memo
 // El Funtional Component recibe un argumento el cual lo desestructuramos y obtenemos dos valores
-// el numero y la referencia de la funcion incrementar()
+// el numero y la referencia de la funcion incrementar() la cual es un useCallback
 export const Hijo = React.memo(({ numero, incrementar }) => {
 
     // Generamos la impresion por pantalla cada vez que se realizara la renderizacion del componente

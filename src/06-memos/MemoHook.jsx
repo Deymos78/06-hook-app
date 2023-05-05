@@ -25,6 +25,7 @@ export const MemoHook = () => {
     // useMemo(() => first, [second]);
 
     const memorizedValue = useMemo(() => heavyStuff(counter), [counter]);
+    console.log(memorizedValue);
 
   return (
     <>

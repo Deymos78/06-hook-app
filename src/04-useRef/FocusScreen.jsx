@@ -12,7 +12,7 @@ export const FocusScreen = () => {
     // En la funcion onClick() imprimimos el 
     const onClick = () => {
 
-      // console.log(inputRef);
+      console.log(inputRef);
       inputRef.current.select();
     
     }

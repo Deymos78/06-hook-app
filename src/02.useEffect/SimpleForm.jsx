@@ -81,6 +81,7 @@ export const SimpleForm = () => {
         />
 
 
+        {/*  Aqui se hace un condicional, donde si el valor el fernando se activara el componente <Message/> */}
         {
             (username === 'fernando') &&  <Message />
         }

@@ -8,12 +8,14 @@ export const Padre = () => {
     // creamos un hook useState 
     const [valor, setValor] = useState(0);
 
+    // Creamos un Callback donde encrementa el valor segun el argumente que se le envie
     const incrementar = useCallback(
         (num) => {
-          setValor( () => valor + num );
+             
+          setValor( (oldValue) => oldValue + num );
         },
         [],
-    )
+    );
 
     
     // La siguiente funcion  incrementa el valor en un numero pasado como argumento 
