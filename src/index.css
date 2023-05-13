@@ -1,5 +1,6 @@
 body {
     padding: 20px;
+    background-color: grey;
 }
 
 button {
@@ -10,3 +11,4 @@ button {
 a {
     margin-right: 5px;
 }
+

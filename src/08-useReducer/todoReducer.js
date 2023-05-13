@@ -12,7 +12,8 @@ export const todoReducer = ( initialState =[], action ) => {
         
         case '[TODO] remove Todo':
 
-            // El filter regresa un nuevo arreglo
+            // El filter regresa un nuevo arreglo, donde cada iteracion devolvera true o false segun cada elemento
+            // cumpla con las condiciones que se han dado, si es true se incluye en el nuevo array
             return initialState.filter( todo => todo.id !== action.payload );
         case '[TODO] toggle Todo':
 

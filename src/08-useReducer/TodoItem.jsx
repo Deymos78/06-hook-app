@@ -2,7 +2,7 @@
 
 // ESTE COMPONENTE FUNCIONAL COLOCA EN UNA LISTA CADA TODO QUE SE LE PASE
 export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo  } ) => {
-  return (
+  return (  
 
     <>
         <div>TodoItem</div>

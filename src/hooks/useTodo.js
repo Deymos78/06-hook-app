@@ -25,16 +25,18 @@ const init = () => {
 
 export const useTodo = () => {
 
+    // Aqui iniciamos el useReducer, le pasamos como primer argumento un reducer, como segundo un array vacio, y 
     const [ todos, dispatch ] = useReducer( todoReducer, [], init );
 
 
     const pendingTodosCount = () =>{
 
-    }
+    };
 
 
+    // Donde estamos los comerntaio de dpnde 
     // Esta funcion manejara ls nuevos todo, o los nuevos objetos
-    const handleNewTodo = ( todo ) => {
+    const handleNewTodo = ( todo ) => { 
         
         // Creamos primero nuestra accion
         const action = {
@@ -49,6 +51,7 @@ export const useTodo = () => {
     };
 
 
+    // Manejar evento de eliminacion
     const handleDeleteTodo = ( id ) => {
         // console.log({id});
         dispatch({
@@ -57,6 +60,7 @@ export const useTodo = () => {
         });
     };
 
+    // Manejamos el estado del elemento
     const handleToggleTodo = ( id ) => {
         dispatch({
             type: '[TODO] toggle Todo',
@@ -66,9 +70,9 @@ export const useTodo = () => {
     }
 
 
-    // En este useEffect colocamos la clave de todos en el almacenamiento local
+    // En este useEffect colocamos la clave de 'todos' en el almacenamiento local
     // Lo colocamos en un useEffect para que solo se guarde cuandno haya una cambio en almacenamiento de los todos
-    // 
+
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify( todos ));
     }, [todos])
